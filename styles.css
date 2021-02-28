@@ -1,0 +1,35 @@
+body {
+  background-color: #0D0208;
+  color: #00FF41;
+  font-size: 3.2em;
+  font-family: Arial;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 2px;
+  font-family: Courier;
+}
+table, th, td {
+  border: 1px solid #003B00;
+}
+h2 {
+  color: #008F11;
+  text-align: center;
+} 
+
+h3, h4, h5 {
+  color: #E6AF2E;
+  text-align: center;
+}
+td:nth-child(1) {
+  text-align: center;
+}
+td:nth-child(2) {
+  text-align: center;
+}
+td:nth-child(3) {
+  text-align: center;
+}
+td:nth-child(4) {
+  text-align: right;
+}
