@@ -3,52 +3,62 @@
 <head>
 <title>CHZX</title>
 <link rel="stylesheet" href="styles.css">
+<script>
+window.onload = function () {
+  fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+  .then(response => response.json())
+  .then(data => {
+    const price = data["bpi"]["USD"]["rate"]
+    console.log(price);
+    return price
+  })
+  .then(result => {
+    document.querySelector(".price").innerText = `$${result}`
+  });
+}
+</script>
+</head>
 <body>
-
 <h2>CHZX</h2>
 <h3>THE GREAT CHEESE EXCHANGE</h3>
 <h4>Bitcoin Spot Market Price</h4>
-<h5>$53,578.76</h5>
-
+<h5 class="price"></h5>
 <table style="width:100%">
   <tr>
-    <th>Image</th>
-    <th>Cheese</th>
-    <th>Description</th> 
+    <th>CHEESE</th>
+    <th>DESCRIPTION</th> 
     <th>฿</th>
   </tr>
   <tr>
-    <td><img src="ryutiny.jpg" alt="Ryu" border=3 height=150 width=200></img></td>
-    <td>LUCIFER CHEDDAR</td>
+    <td>LUCIFER
+      <br>CHEDDAR</td>
     <td>Raw cow's milk cheddar with Calabrian pepper flakes. Aged at least two months.</td>
     <td>0.00015286</td>
   </tr>
   <tr>
-    <td><img src="parmagiano-reggiano.png" alt="Parmagiano Reggiano" border=3 height=150 width=200></img></td>
     <td>PARMIGIANO REGGIANO</td>
     <td>Italian hard, granular cow's milk cheese. Aged at least twelve months.</td>
     <td>0.00027474</td>
   </tr>
   <tr>
-    <td><img src="gunpowder-blue.png" alt="Gunpowder Blue" border=3 height=150 width=200></img></td>
-    <td>GUNPOWDER BLUE</td>
+    <td>GUNPOWDER
+      <br>BLUE</td>
     <td>Blue Cheese aged in vegetable ash. Nutty, creamy, and buttery.</td>
     <td>0.00020904</td>
   </tr>
   <tr>
-    <td><img src="pecorino-romano.png" alt="Pecorino Romano" border=3 height=150 width=200></img></td>
-    <td>PECORINO ROMANO</td>
+    <td>PECORINO 
+      <br>ROMANO</td>
     <td>Italian hard cheese made with sheep's milk. Aged at least five months.</td>
     <td>0.00009873</td>
   </tr>
   <tr>
-    <td><img src="red-lion.png" alt="Red Lion" border=3 height=150 width=200></img></td>
-    <td>RED LION</td>
+    <td>RED 
+      <br>LION</td>
     <td>English cheddar with wholegrain mustard seeds and ale. Wrapped in red wax and aged for three months.</td>
     <td>0.00022266</td>
   </tr>
   <tr>
-    <td><img src="royal-black.png" alt=Royal Black & Blue" border=3 height=150 width=200></img></td>
     <td>ROYAL 
       <br>BLACK AND BLUE</td>
     <td>Blue cheese aged in vegetable ash. Mildly spicy and slightly sweet with earthy undertones.</td>
