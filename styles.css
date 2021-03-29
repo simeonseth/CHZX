@@ -16,6 +16,9 @@ h2 {
   color: #008F11;
   text-align: center;
 } 
+h2 span {
+  color: #003B00;
+}
 
 h3, h4, h5 {
   color: #E6AF2E;
